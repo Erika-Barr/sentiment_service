@@ -14,4 +14,5 @@ class Test(Resource):
 api.add_resource(Test, '/test')
 
 if __name__ == '__main__':
-    app.run(port='5002')
+    #app.run(port='5002')
+    app.run()
