@@ -1,6 +1,7 @@
 from flask import Flask, request
 from flask_restful import Resource, Api
 from flask_jsonpify import jsonify
+from sentimentService import getOverallPolarity
 
 app = Flask(__name__)
 #api = Api(app)
@@ -19,7 +20,7 @@ def index():
 
 @app.route('/analyze/<twitter>')
 def getTwitterHandle(twitter=None):
-    ai_service = 'AI did a sentiment analysis on twitter handle: {}'.format(twitter)
+    ai_service = 'AI did a sentiment analysis on twitter handle: {}'.format(getOverallPolarity(twitter))
     return jsonify(ai_service)
 
 
