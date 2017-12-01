@@ -12,7 +12,7 @@ auth.set_access_token(accessToken, accessTokenSecret)
 api = tweepy.API(auth)
 
 def getUserTimeline(handle):
-    userTweets = api.user_timeline(screen_name=handle, count=5)
+    userTweets = api.user_timeline(screen_name=handle, count=100)
     return userTweets
 
 def sentiment(tweet):
