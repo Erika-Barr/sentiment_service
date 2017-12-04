@@ -20,7 +20,8 @@ def index():
 
 @app.route('/analyze/<twitter>')
 def getTwitterHandle(twitter=None):
-    ai_service = 'AI did a sentiment analysis on twitter handle: {} Here is your analyzed data: {}'.format(twitter, getSentimentAnalysis(twitter))
+    #ai_service = 'AI did a sentiment analysis on twitter handle: {} Here is your analyzed data: {}'.format(twitter, getSentimentAnalysis(twitter))
+    ai_service = getSentimentAnalysis(twitter)
     return jsonify(ai_service)
 
 
