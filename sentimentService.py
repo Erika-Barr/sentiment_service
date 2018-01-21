@@ -34,7 +34,6 @@ def load_cache():
 def getUserTimeline(handle, count=10):
     userTweets = api.user_timeline(screen_name=handle, count=count)
     return userTweets
-print(getUserTimeline("@realDonalTrump", count=100))
 
 
 def getPolarity(tweet):
